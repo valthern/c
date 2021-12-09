@@ -39,12 +39,18 @@ char *strupr(char *str){
 
 char *strrev(char *str){
     int longitud = strlen(str);
-    unsigned char *pointer = (unsigned char *)str;
-    char invertida[longitud]; //consideré sumarle uno
+    char *pointer = (char *)str;
+    char invertida[longitud];
+    char *pointerInvertido = &invertida[longitud - 1];
 
-    for (int i = 0; i < longitud; i++)
+    while (*pointer)
     {
-        /* code */
+        *pointerInvertido = *pointer;
+        pointer++;
+        pointerInvertido--;
     }
+    char* punterito = (char *)invertida;
     
+    return punterito;
 }
+
