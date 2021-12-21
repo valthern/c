@@ -1,4 +1,6 @@
 #include <stdio.h>
+// para que reconozca srand()
+#include <stdlib.h>
 #include <time.h>
 
 void funcionAleatoria();
@@ -10,8 +12,10 @@ int main (){
 
 void funcionAleatoria(){
     int num;
+    time_t t;
+
     srand(time(NULL));
 
     num = 1 + rand() % ((10 - 1) - 1);
-    printf("%d", num);
+    printf("%d\n", num);
 }
