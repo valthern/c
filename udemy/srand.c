@@ -1,5 +1,5 @@
 #include <stdio.h>
-// para que reconozca srand()
+// para que reconozca la fonción srand()
 #include <stdlib.h>
 #include <time.h>
 
