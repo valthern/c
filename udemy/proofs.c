@@ -3,10 +3,12 @@
 
 void punterosYCadenas();
 void arreglosDeCaracteres();
+void usoStrtok();
 
 int main(){
     punterosYCadenas();
     arreglosDeCaracteres();
+    usoStrtok();
 
     return 0;
 }
@@ -32,4 +34,19 @@ void arreglosDeCaracteres(){
     }
     printf("\n");
 }
-// CONCLUSIÓN: Se imrpime la arroba dos veces por su código ASCII
+// CONCLUSIÓN: Se imprime la arroba dos veces por su código ASCII
+
+// Uso de strtok()
+void usoStrtok(){
+    char s1[49] = "Esto es un ejemplo para usar la funcion strtok()";
+    char s2[4] = " \n\t";
+    char *ptr;
+
+    printf( "s1=%s\n", s1 );
+
+    ptr = strtok( s1, s2 );    // Primera llamada => Primer token
+    printf( "%s\n", ptr );
+    while( (ptr = strtok( NULL, s2 )) != NULL )    // Posteriores llamadas
+        printf( "%s\n", ptr );
+}
+// CONCLUSION: Prueba exitosa
