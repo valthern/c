@@ -16,7 +16,6 @@ void ordenarXIntercambio(int arreglo[],int size);
 
 int main(){
     int a[10] = {9,7,5,3,1,0,8,6,4,2};
-    int swp;
 
     printf("Impresión del arreglo en orden original:\n");
     imprimirArreglo(a, TAMANO);
@@ -24,23 +23,29 @@ int main(){
     ordenarXIntercambio(a, TAMANO);
 
     printf("Impresión del arreglo ordenado:\n");
+    imprimirArreglo(a, TAMANO);
 
     return 0;
 }
 
 void imprimirArreglo(int arreglo[],int size){
-    for (int i = 0; i < TAMANO; i++)
+    for (int i = 0; i < size; i++)
         printf("%i ", arreglo[i]);
 }
 
 void ordenarXIntercambio(int arreglo[],int size){
-    for (int i = 0; i < size; i++)
+    int swp;
+
+    for (int i = 0; i < size - 1; i++)
     {
-        for (int i = 0; i < size; i++)
+        for (int j = i; j < size - 1; j++)
         {
-            /* code */
+            if (arreglo[j] > arreglo[j + 1])
+            {
+                swp = arreglo[j];
+                arreglo[j] = arreglo[j + 1];
+                arreglo[j + 1] = swp;
+            }
         }
-        
     }
-    
 }
