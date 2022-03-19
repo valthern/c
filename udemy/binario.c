@@ -139,6 +139,7 @@ void complementoA2(int arreglo[], int size)
     if (arreglo[posicion] == 0)
         arreglo[posicion] = 1;
     
+    printf("Complemento a dos");
     for (int i = 0; i < size; i++)
     {
         printf("%i ", arreglo[i]);

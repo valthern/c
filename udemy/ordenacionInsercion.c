@@ -37,5 +37,18 @@ void imprimirArreglo(int arreglo[], int size){
 }
 
 void ordernarXInsercion(int arreglo[], int size){
+    if (size <= 1)
+        return;
+    
+    for (int i = 0; i < size; i++)
+    {
+        //int swp = i;
+
+        for (int j = 0; j <= i; j++)
+        {
+            
+        }
+                
+    }
     
 }
