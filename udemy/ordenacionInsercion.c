@@ -40,15 +40,18 @@ void ordernarXInsercion(int arreglo[], int size){
     if (size <= 1)
         return;
     
-    for (int i = 0; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
-        //int swp = i;
-
-        for (int j = 0; j <= i; j++)
+        for (int j = 0; j < i; j++)
         {
-            
-        }
+            int evaluado = arreglo[i];
+
+            if (swp < arreglo[j])
+            {
                 
+            }
+            
+        }   
     }
     
 }
