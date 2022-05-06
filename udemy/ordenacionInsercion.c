@@ -16,8 +16,9 @@
 void imprimirArreglo(int arreglo[], int size);
 void ordernarXInsercion(int arreglo[], int size);
 
-int main (){
-    int a[TAMANO] = {9,7,5,3,1,0,8,6,4,2};
+int main()
+{
+    int a[TAMANO] = {9, 7, 5, 3, 1, 0, 8, 6, 4, 2};
 
     printf("Impresión del arreglo en orden original:\n");
     imprimirArreglo(a, TAMANO);
@@ -26,32 +27,34 @@ int main (){
 
     printf("Impresión del arreglo ordenado:\n");
     imprimirArreglo(a, TAMANO);
-    
+
     return 0;
 }
 
-void imprimirArreglo(int arreglo[], int size){
+void imprimirArreglo(int arreglo[], int size)
+{
     for (int i = 0; i < size; i++)
         printf("%i ", arreglo[i]);
     printf("\n");
 }
 
-void ordernarXInsercion(int arreglo[], int size){
+void ordernarXInsercion(int arreglo[], int size)
+{
     if (size <= 1)
         return;
-    
+
     for (int i = 1; i < size; i++)
     {
+        int evaluado = arreglo[i];
+
         for (int j = 0; j < i; j++)
         {
-            int evaluado = arreglo[i];
-
-            if (swp < arreglo[j])
+            if (evaluado < arreglo[j])
             {
-                
+                int tmp = arreglo[j];
+                arreglo[j] = evaluado;
+                evaluado = tmp;
             }
-            
-        }   
+        }
     }
-    
 }
