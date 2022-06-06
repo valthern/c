@@ -51,9 +51,18 @@ void ordernarXInsercion(int arreglo[], int size)
         {
             if (evaluado < arreglo[j])
             {
-                int tmp = arreglo[j];
-                arreglo[j] = evaluado;
-                evaluado = tmp;
+                // int tmp = arreglo[j];
+                // arreglo[j] = evaluado;
+                // evaluado = tmp;
+                int indiceFinal = i;
+                int indiceInicial = j;
+
+                while (indiceFinal > indiceInicial)
+                {
+                    arreglo[indiceFinal] = arreglo[indiceFinal - 1];
+                    indiceFinal--;
+                }
+                arreglo[indiceInicial] = evaluado;
             }
         }
     }
