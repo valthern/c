@@ -11,15 +11,15 @@
  *
  */
 #include <stdio.h>
-#define TAMANO 3
+#define TAMANO 10
 
 void imprimirArreglo(int arreglo[], int size);
 void ordernarXInsercion(int arreglo[], int size);
 
 int main()
 {
-    // int a[TAMANO] = {9, 7, 5, 3, 1, 0, 8, 6, 4, 2};
-    int a[TAMANO] = {9, 7, 5};
+    int a[TAMANO] = {9, 7, 5, 3, 1, 0, 8, 6, 4, 2};
+    // int a[TAMANO] = {9, 7, 5, 3};
 
     printf("Impresión del arreglo en orden original:\n");
     imprimirArreglo(a, TAMANO);
@@ -46,24 +46,22 @@ void ordernarXInsercion(int arreglo[], int size)
 
     for (int i = 1; i < size; i++)
     {
-        int evaluado = arreglo[i];
+        int swp, indiceFinal, indiceInicial;
 
         for (int j = 0; j < i; j++)
         {
-            if (evaluado < arreglo[j])
+            if (arreglo[i] < arreglo[j])
             {
-                // int tmp = arreglo[j];
-                // arreglo[j] = evaluado;
-                // evaluado = tmp;
-                int indiceFinal = i;
-                int indiceInicial = j;
+                swp = arreglo[i];
+                indiceFinal = i;
+                indiceInicial = j;
 
                 while (indiceFinal > indiceInicial)
                 {
                     arreglo[indiceFinal] = arreglo[indiceFinal - 1];
                     indiceFinal--;
                 }
-                arreglo[indiceInicial] = evaluado;
+                arreglo[indiceInicial] = swp;
             }
         }
     }
