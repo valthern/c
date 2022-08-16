@@ -5,7 +5,7 @@
 int main()
 {
     double v, a;
-    printf("Ingrese un valor numérico: ");
+    printf("Ingrese un valor numerico: ");
     scanf("%lf", &v);
 
     // invoco a la función

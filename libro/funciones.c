@@ -1,3 +1,5 @@
+#include "funciones.h"
+
 // desarrollo de las funciones
 double valorAbsoluto(double d)
 {
